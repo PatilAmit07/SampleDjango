@@ -77,6 +77,19 @@ class PatientDischargeDetails(models.Model):
     total=models.PositiveIntegerField(null=False)
 
 
+
+class TestCheckup(models.Model):
+    patientId=models.PositiveIntegerField(null=True)
+    ssignedDoctorName=models.CharField(max_length=40)
+    address = models.CharField(max_length=40)
+    mobile = models.CharField(max_length=20,null=True)
+    symptoms = models.CharField(max_length=100,null=True)
+    test_name=models.CharField(max_length=100, null=True)
+
+
+
+
+
 #Developed By : sumit kumar
 #facebook : fb.com/sumit.luv
 #Youtube :youtube.com/lazycoders
