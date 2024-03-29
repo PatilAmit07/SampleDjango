@@ -76,6 +76,15 @@ class PatientDischargeDetails(models.Model):
     OtherCharge=models.PositiveIntegerField(null=False)
     total=models.PositiveIntegerField(null=False)
 
+class Random(models.Model):
+    Id=models.AutoField(primary_key=True)
+    FirstName=models.CharField(max_length=100,blank=True,null=True)
+    LastName=models.CharField(max_length=100,blank=True,null=True)
+    Password=models.CharField(max_length=100,blank=True,null=True)
+    email=models.EmailField()
+
+    def __str__(self):
+        return "{}{}".format(self.FirstName,self.LastName)
 
 
 class TestCheckup(models.Model):
