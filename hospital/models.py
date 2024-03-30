@@ -83,10 +83,9 @@ class Random(models.Model):
     Password=models.CharField(max_length=100,blank=True,null=True)
     email=models.EmailField()
     contactno=models.CharField(max_length=10)
-
+    description=models.CharField(max_length=500)
     def __str__(self):
         return "{}{}".format(self.FirstName,self.LastName)
-
 
 class TestCheckup(models.Model):
     patientId=models.PositiveIntegerField(null=True)
