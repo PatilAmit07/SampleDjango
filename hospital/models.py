@@ -82,6 +82,7 @@ class Random(models.Model):
     LastName=models.CharField(max_length=100,blank=True,null=True)
     Password=models.CharField(max_length=100,blank=True,null=True)
     email=models.EmailField()
+    contactno=models.CharField(max_length=10)
 
     def __str__(self):
         return "{}{}".format(self.FirstName,self.LastName)
